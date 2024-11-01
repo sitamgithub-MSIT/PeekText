@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+}
+h1, h2, h3 {
+  color: #ffdd57;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #333;
+}
+.loading-spinner {
+  border-color: #ffdd57;
+}
+.custom-button {
+  background-color: #ffdd57;
+  transition: background-color 0.3s;
+}
+.custom-button:hover {
+  background-color: #ffd023;
+}

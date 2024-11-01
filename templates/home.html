@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PeekText</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body class="font-sans text-white m-0 p-5 leading-relaxed">
+    <div class="container mx-auto px-4 py-8">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8">PeekText</h1>
+        <p class="text-center mb-8">
+          Convert web articles to plain text with ease.
+        </p>
+
+        <div class="bg-[#1a1a1a] border border-[#333] rounded-lg p-5">
+          <form id="urlForm" class="space-y-4">
+            <div>
+              <label for="url" class="block text-sm font-medium mb-1"
+                >Enter Web Article URL</label
+              >
+              <input
+                type="url"
+                id="url"
+                name="url"
+                required
+                class="w-full bg-[#333] border border-[#444] text-white px-3 py-2 rounded focus:outline-none focus:border-[#ffdd57]"
+                placeholder="https://..."
+              />
+            </div>
+            <button
+              type="submit"
+              class="custom-button w-full text-black py-2 px-4 rounded"
+            >
+              CONVERT
+            </button>
+          </form>
+          <div id="loading" class="hidden text-center py-4">
+            <div
+              class="animate-spin rounded-full h-8 w-8 border-b-2 loading-spinner mx-auto"
+            ></div>
+            <p class="mt-2">Converting...</p>
+          </div>
+          <div id="result" class="mt-4 hidden bg-gray-800 p-2 rounded-md">
+            <pre id="response" class="p-2 rounded-md text-white overflow-auto"></pre>
+          </div>
+          <div id="error" class="hidden mt-4 text-red-500 text-center"></div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="mt-8 text-center text-gray-500">
+      <p>&copy; 2024 PeekText. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/result.js"></script>
+  </body>
+</html>
