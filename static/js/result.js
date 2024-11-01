@@ -13,6 +13,11 @@ document.getElementById("urlForm").addEventListener("submit", async (e) => {
   errorDiv.classList.add("hidden");
 
   try {
+    /**
+     * Sends a POST request to the "/generate" endpoint with the URL input value.
+     *
+     * @returns {Promise<Response>} The response from the fetch request.
+     */
     const response = await fetch("/generate", {
       method: "POST",
       headers: {
