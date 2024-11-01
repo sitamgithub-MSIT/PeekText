@@ -28,7 +28,7 @@ def main():
 @app.route("/generate", methods=["POST"])
 def generate():
     """
-    Endpoint to generate Streamlit app code based on the provided prompt
+    Endpoint to generate a response for a given web article URL.
 
     Expected JSON body:
     {
@@ -62,6 +62,7 @@ def generate():
         # Return response
         return jsonify({"status": "success", "response": response}), HTTPStatus.OK
 
+    # Handle exceptions
     except Exception as e:
         logging.error(f"Error in converting to text: {str(e)}")
         return (
