@@ -9,6 +9,7 @@ from src.services.content_extractor import extract_text
 from src.services.jina_reader import fetch_data
 from src.logger import logging
 
+
 # Load environment variables
 load_dotenv()
 

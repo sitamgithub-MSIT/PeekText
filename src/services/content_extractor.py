@@ -2,6 +2,15 @@ import re
 
 
 def extract_text(content: str) -> str:
+    """
+    Extracts and processes text content from a given string.
+
+    Args:
+        content (str): The input text content to be processed.
+
+    Returns:
+        str: The cleaned and processed text content.
+    """
     # Normalize line endings to \n and remove any BOM characters
     content = content.replace("\r\n", "\n").replace("\r", "\n").strip()
 
