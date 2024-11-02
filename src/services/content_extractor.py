@@ -16,7 +16,7 @@ def extract_text(content: str) -> str:
 
     # Extract the title with more flexible pattern matching
     title_match = re.search(r"(?:^|\n)Title:\s*(.*?)(?:\n|$)", content)
-    title = title_match.group(1).strip() if title_match else ""
+    title = title_match[1].strip() if title_match else ""
 
     # Using non-greedy matching and accounting for variable whitespace
     content = re.sub(

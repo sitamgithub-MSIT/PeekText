@@ -23,7 +23,7 @@ def fetch_data(url: str, token: str) -> str:
         logging.info(f"Fetching data from URL: {url}")
 
         # Send a GET request to the URL with the authorization header
-        response = requests.get("https://r.jina.ai/" + url, headers=headers)
+        response = requests.get(f"https://r.jina.ai/{url}", headers=headers)
 
         # Check for non-successful status codes
         if response.status_code != 200:
@@ -36,7 +36,7 @@ def fetch_data(url: str, token: str) -> str:
         # Return the response text if status is 200 OK
         return response.text
 
-    # Raise error if any error occurs during data fetching
+    # Handle exceptions that may occur during the request
     except Exception as e:
         # Custom exception handling
         raise CustomExceptionHandling(e, sys) from e
