@@ -15,7 +15,7 @@ The project is organized as follows:
     - `content_extractor.py`: This file contains the code for cleaning the extracted text from the web articles.
     - `jina_reader.py`: This file contains the code for the Jina AI's Reader API calling.
 
-  - `logger.py`: This file contains the code for logging during training and prediction.
+  - `logger.py`: This file contains the code for logging during the application's execution.
   - `exception.py`: This file contains the custom exceptions used in the project.
 
 - `static/`: This directory contains the web application's CSS stylesheet and JavaScript file.
@@ -109,9 +109,7 @@ Once the Flask web application is up and running, allows users to provide a URL 
 
 ## Results
 
-The project successfully extracts text from web articles. The extracted text is displayed on the web page after applying some cleaning.
-
-**Note**: The screenshots of the testing and deployment results are provided in the `assets/` directory.
+The project successfully extracts text from web articles. The extracted text is displayed on the web page after applying some cleaning. For results, refer to the `assets/` directory for the output screenshots, which show the web application's functionality and the deployment on Google Cloud Platform (GCP).
 
 ## Conclusion
 
