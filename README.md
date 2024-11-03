@@ -84,7 +84,7 @@ Now, you can open your local host and see the web application running. If you wo
 - Deploy the Docker image to Google Cloud Run. (Build and push your Docker image to the Google Artifact Registry or another container registry. Deploy the image to Cloud Run by specifying the necessary configurations.)
 - Access the service using the provided URL. (Once deployed, a URL is provided to access the service. Use the URL to access the service.)
 
-For detailed instructions and code examples, please review the blog post [here](https://lesliemwubbel.com/setting-up-a-flask-app-and-deploying-it-via-google-cloud/). The blog post should be enough to get you started with deploying this on GCP. Also, please look at the screenshots in the assets folder for this project's deployment results.
+For detailed instructions and code examples, please review the blog post [here](https://lesliemwubbel.com/setting-up-a-flask-app-and-deploying-it-via-google-cloud/). The blog post should be enough to get you started with deploying this on GCP. Also, please take a look at the screenshots in the assets folder for this project's deployment results.
 
 ## Testing
 
@@ -95,15 +95,15 @@ To test the deployed service locally, follow these steps:
 3. Run the `test_app.py` file to test the Flask app.
 4. Execute the command: `pytest test/test_app.py`
 5. Verify the response and check for any errors or issues.
-6. Optionally, please look at the screenshots in the assets folder for test results.
+6. Optionally, please take a look at the screenshots in the assets folder for test results.
 
 ## Usage
 
-Once the Flask web application is up and running, allows users to provide a URL of a web article and extract the text from the article. To use the web application, follow these steps:
+Once the Flask web application is up and running, it allows users to provide a URL of a web article and extract the text from the article. To use the web application, follow these steps:
 
 1. Run the Flask app: `python app.py`
 2. Open a web browser and go to `http://localhost:5000/`
-3. Provide web articles URL in the text box.
+3. Provide web article URLs in the text box.
 4. Click the "CONVERT" button.
 5. The extracted text will be displayed then.
 
