@@ -10,6 +10,10 @@ COPY . ./
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Run the post-install script
+RUN chmod +x post_install.sh
+RUN ./post_install.sh
+
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
 # For environments with multiple CPU cores, increase the number of workers
