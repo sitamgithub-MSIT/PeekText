@@ -1,6 +1,6 @@
 # PeekText - Convert web articles to plain text
 
-This repository contains the application that develops a web application that extracts text from web articles. The application uses Jina AI's Reader API to extract the content from the web articles. The extracted text is then displayed on the web page after applying some cleaning. The service is wrapped in a Flask web application and containerized using Docker. Finally, the service is deployed on the Google Cloud Platform (GCP) using the Cloud Run service.
+This repository contains the application that develops a web application that extracts text from web articles. The application uses Crawl4AI to extract the markdown content from the web articles. The extracted content is then displayed on the web page after applying some cleaning. The service is wrapped in a Flask web application and containerized using Docker. Finally, the service is deployed on the Google Cloud Platform (GCP) using the Cloud Run service.
 
 ## Project Structure
 
@@ -12,8 +12,8 @@ The project is organized as follows:
 
   - `services/`: This directory contains the code for Reader API calling and cleaning the extracted text.
 
-    - `content_extractor.py`: This file contains the code for cleaning the extracted text from the web articles.
-    - `jina_reader.py`: This file contains the code for the Jina AI's Reader API calling.
+    - `content_cleaner.py`: This file contains the code for cleaning the extracted content from the web articles.
+    - `crawler.py`: This file contains the code for the Crawl4AI to extract the fit markdown content from the web articles.
 
   - `logger.py`: This file contains the code for logging during the application's execution.
   - `exception.py`: This file contains the custom exceptions used in the project.
@@ -45,7 +45,7 @@ The project is organized as follows:
 ## Technologies Used
 
 - **Python**: Python is used as the primary programming language for this project.
-- **Reader API**: Jina AI's Reader API is used to extract the content from the web articles.
+- **Crawl4AI**: Crawl4AI is used to extract the markdown content from the web articles.
 - **Flask**: Flask is used to develop the web application.
 - **Docker**: Docker is used to containerize the application.
 - **Cloud Run**: Google Cloud Run deploys the containerized application.
@@ -64,13 +64,7 @@ To install the required dependencies and set up the environment, follow these st
 5. Install the required dependencies: `pip install -r requirements.txt`
 6. Run the Flask app: `python app.py`
 
-**Note**: You need to have the Jina API key to run the application. You can get the API key [here](https://jina.ai/reader/). Once you have the API key, create a `.env` file in the root directory and add the following environment variables provided in the `.env.example` file. Replace the values with your API key.
-
-```bash
-JINA_API_KEY=YOUR_JINA_API_KEY
-```
-
-Now, you can open your local host and see the web application running. If you would like more information, please refer to the Flask documentation [here](https://flask.palletsprojects.com/en/2.0.x/quickstart/#debug-mode).
+Now, you can open your local host at port 5000 and see the web application running. If you would like more information, please refer to the Flask documentation [here](https://flask.palletsprojects.com/en/2.0.x/quickstart/#debug-mode).
 
 ## Deployment
 
@@ -113,7 +107,7 @@ The project successfully extracts text from web articles. The extracted text is 
 
 ## Conclusion
 
-In this project, we successfully developed an application that extracts text from web articles. We used Jina AI's Reader API to extract the content from the web articles and then after applying some cleaning, we displayed the extracted text on the web page. Then we wrapped the service in a Flask web application and containerized it using Docker. Finally, we deployed it on the Google Cloud Platform (GCP) using the Cloud Run service.
+In this project, we successfully developed an application that extracts text from web articles. We used Crawl4AI to extract the content from the web articles and then after applying some cleaning, we displayed the extracted text on the web page. Then we wrapped the service in a Flask web application and containerized it using Docker. Finally, we deployed it on the Google Cloud Platform (GCP) using the Cloud Run service.
 
 ## License
 
