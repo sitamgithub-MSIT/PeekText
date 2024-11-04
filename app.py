@@ -64,14 +64,13 @@ def generate():
         # Return response
         return jsonify({"status": "success", "response": response}), HTTPStatus.OK
 
-    # Handle exceptions
     except Exception as e:
         logging.error(f"Error in converting to text: {str(e)}")
         return (
             jsonify(
                 {
                     "status": "error",
-                    "error": "Oops! Something went wrong. Please try again later.",
+                    "error": f"Oops! Something went wrong. Please try again later{str(e)}",
                 }
             ),
             HTTPStatus.INTERNAL_SERVER_ERROR,
