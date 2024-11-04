@@ -1,12 +1,13 @@
-import os
+# Necessary imports
+from asgiref.sync import async_to_sync
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from http import HTTPStatus
 
 # Local imports
-from src.services.content_extractor import extract_text
-from src.services.jina_reader import fetch_data
+from src.services.content_cleaner import clean_content
+from src.services.crawler import extract_markdown
 from src.logger import logging
 
 
@@ -51,11 +52,11 @@ def generate():
         )
 
     try:
-        # Get the prompt from request
-        reader_llm_response = fetch_data(data["url"], os.environ.get("JINA_API_KEY"))
+        # Get the markdown content from the URL
+        crawler_response = async_to_sync(extract_markdown)(data["url"])
 
-        # Generate response
-        response = extract_text(reader_llm_response)
+        # Clean the content
+        response = clean_content(crawler_response)
 
         # Log successful response
         logging.info("Response generated successfully for prompt")

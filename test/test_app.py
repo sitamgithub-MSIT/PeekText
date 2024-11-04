@@ -16,7 +16,7 @@ def client():
     Returns:
         FlaskClient: The test client for the Flask app.
     """
-    app.config["TESTING"] = True
+    app.confi["TESTING"] = True
     yield app.test_client()
 
 
@@ -38,5 +38,5 @@ def test_generate_success(client):
     assert response.json["status"] == "success"
     assert (
         response.json["response"]
-        == "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\n\nMORE INFORMATION..."
+        == "Example Domain\n\nThis domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\nMore information..."
     )
