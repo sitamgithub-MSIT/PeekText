@@ -1,4 +1,5 @@
 # Necessary imports
+import subprocess
 from asgiref.sync import async_to_sync
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, render_template
@@ -18,6 +19,9 @@ load_dotenv()
 application = Flask(__name__)
 app = application
 CORS(app)
+
+# Install Playwright browsers
+subprocess.run(["playwright", "install"])
 
 
 # Home route for the app
