@@ -21,7 +21,7 @@ app = application
 CORS(app)
 
 # Install Playwright browsers
-subprocess.run(["playwright", "install"])
+subprocess.run(["python", "-m", "playwright", "install", "chromium"])
 
 
 # Home route for the app
