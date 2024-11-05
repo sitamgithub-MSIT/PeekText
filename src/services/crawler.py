@@ -11,7 +11,7 @@ from src.exception import CustomExceptionHandling
 
 
 # Playwright command
-subprocess.run(["python", "-m", "playwright", "install", "chromium"])
+# subprocess.run(["python", "-m", "playwright", "install", "chromium"])
 
 
 async def extract_markdown(url: str):
