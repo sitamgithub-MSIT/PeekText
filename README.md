@@ -10,7 +10,7 @@ The project is organized as follows:
 
 - `src/`: This directory contains the source code for the project.
 
-  - `services/`: This directory contains the code for Reader API calling and cleaning the extracted text.
+  - `services/`: This directory contains the code for the Crawl4AI crawler and the content cleaner.
 
     - `content_cleaner.py`: This file contains the code for cleaning the extracted content from the web articles.
     - `crawler.py`: This file contains the code for the Crawl4AI to extract the fit markdown content from the web articles.
@@ -63,6 +63,9 @@ To install the required dependencies and set up the environment, follow these st
    - For Linux/Mac: `source tutorial-env/bin/activate`
 5. Install the required dependencies: `pip install -r requirements.txt`
 6. Run the Flask app: `python app.py`
+
+**Note**: When installing Crawl4AI, the setup script should automatically install and set up Playwright. However, for error encounters related to Playwright-related issues, manually install it using one of these methods through the command line:
+`playwright install` or `python -m playwright install`
 
 Now, you can open your local host at port 5000 and see the web application running. If you would like more information, please refer to the Flask documentation [here](https://flask.palletsprojects.com/en/2.0.x/quickstart/#debug-mode).
 

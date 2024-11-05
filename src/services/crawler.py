@@ -1,4 +1,5 @@
 import sys
+import subprocess
 import nest_asyncio
 
 nest_asyncio.apply()
@@ -7,6 +8,10 @@ from crawl4ai import AsyncWebCrawler
 # Local imports
 from src.logger import logging
 from src.exception import CustomExceptionHandling
+
+
+# Playwright command
+subprocess.run(["playwright", "install"])
 
 
 async def extract_markdown(url: str):
