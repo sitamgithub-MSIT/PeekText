@@ -23,13 +23,13 @@ The project is organized as follows:
   - `css/`: This directory contains the custom CSS stylesheet for the web application.
   - `js/`: This directory contains the JavaScript file for the web application.
 
-- `templates/home.html`: This file contains the HTML code for the home page of the Flask web application.
+- `templates/home.html`: This file contains the HTML code for the Flask web application's home page.
 
 - `test/`: This directory contains the pytest tests for the Flask web application.
 
   - `test_app.py`: This file contains the tests for the Flask web application using the `pytest`. It includes tests for both routes.
 
-- `app.py`: This file contains the code for the Flask web application. It contains two routes: one for the home page and one for the generated text task.
+- `app.py`: This file contains the code for the Flask web application. It includes two routes: one for the home page and one for the generated text task.
 
 - `.env.example`: This file contains the example environment variables for the Flask web application. It is used as a template for the actual `.env` file.
 - `app.yaml`: This file contains the configuration for deploying the Flask app on Google Cloud Platform (GCP).
