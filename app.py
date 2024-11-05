@@ -1,5 +1,4 @@
 # Necessary imports
-import subprocess
 from asgiref.sync import async_to_sync
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify, render_template

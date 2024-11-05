@@ -1,5 +1,4 @@
 import sys
-import subprocess
 import nest_asyncio
 
 nest_asyncio.apply()
@@ -8,10 +7,6 @@ from crawl4ai import AsyncWebCrawler
 # Local imports
 from src.logger import logging
 from src.exception import CustomExceptionHandling
-
-
-# Playwright command
-# subprocess.run(["python", "-m", "playwright", "install", "chromium"])
 
 
 async def extract_markdown(url: str):
@@ -34,18 +29,20 @@ async def extract_markdown(url: str):
                 bypass_cache=False,
                 word_count_threshold=10,
                 excluded_tags=[
-                    "form",
                     "nav",
+                    "header",
                     "footer",
                     "aside",
-                    "header",
+                    "form",
+                    "button",
                     "script",
                     "style",
                     "iframe",
+                    "svg",
+                    "img",
+                    "figure",
+                    "figcaption",
                     "noscript",
-                    "banner",
-                    "advertisement",
-                    "cookie-notice",
                 ],
                 remove_overlay_elements=True,
                 exclude_social_media_links=True,
@@ -58,8 +55,6 @@ async def extract_markdown(url: str):
                     "instagram.com",
                     "pinterest.com",
                     "reddit.com",
-                    "tumblr.com",
-                    "tiktok.com",
                 ],
                 magic=True,
             )
