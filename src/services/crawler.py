@@ -11,7 +11,7 @@ from src.exception import CustomExceptionHandling
 
 
 # Playwright command
-subprocess.run(["playwright", "install"])
+# subprocess.run(["playwright", "install"])
 
 
 async def extract_markdown(url: str):
@@ -28,7 +28,9 @@ async def extract_markdown(url: str):
         logging.info(f"Fetching data from URL: {url}")
 
         # Initialize the AsyncWebCrawler
-        async with AsyncWebCrawler(verbose=True) as crawler:
+        async with AsyncWebCrawler(
+            verbose=True, launch_options={"headless": True}
+        ) as crawler:
             result = await crawler.arun(
                 url=url,
                 bypass_cache=False,
