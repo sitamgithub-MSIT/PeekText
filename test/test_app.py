@@ -16,7 +16,7 @@ def client():
     Returns:
         FlaskClient: The test client for the Flask app.
     """
-    app.confi["TESTING"] = True
+    app.config["TESTING"] = True
     yield app.test_client()
 
 
