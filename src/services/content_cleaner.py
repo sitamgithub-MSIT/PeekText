@@ -55,7 +55,6 @@ def clean_content(content: str) -> str:
 
     # Remove task lists
     content = re.sub(r"^\s*-\s*\[[xX ]\]\s*", "\t• ", content, flags=re.MULTILINE)
-    # content = re.sub(r"\[\]\(.*?\)", "", content)
 
     # Remove large gaps
     content = re.sub(r"\n{2,}", "\n", content)
