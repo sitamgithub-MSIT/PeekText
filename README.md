@@ -43,13 +43,16 @@ The project is organized as follows:
 - **Python**: Python is used as the primary programming language for this project.
 - **Crawl4AI**: Crawl4AI is used to extract the markdown content from the web articles.
 - **Flask**: Flask is used to develop the web application.
+- **HTML/CSS/JavaScript**: HTML, CSS, and JavaScript are used to develop the front-end of the web application.
+- **Playwright**: Playwright is used to automate the browser actions for the Crawl4AI.
+- **pytest**: pytest is used to write and run tests for the Flask web application.
 
 ## Installation and Environment Setup
 
 To install the required dependencies and set up the environment, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/sitamgithub-MSIT/PeekText.git`
-2. Change the directory: `cd PeekText`
+1. Clone the repository: `git clone https://github.com/sitamgithub-MSIT/crawl4ai-txtfy.git`
+2. Change the directory: `cd crawl4ai-txtfy`
 3. Create a virtual environment: `python -m venv tutorial-env`
 4. Activate the virtual environment:
    - For Windows: `tutorial-env\Scripts\activate`
