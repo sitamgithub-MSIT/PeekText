@@ -1,6 +1,6 @@
 # PeekText - Convert web articles to plain text
 
-This repository contains the application that develops a web application that extracts text from web articles. The application uses Crawl4AI to extract the markdown content from the web articles. The extracted content is then displayed on the web page after applying some cleaning. The service is wrapped in a Flask web application.
+This repository contains the application that develops a web application that extracts text from web articles. The application uses Crawl4AI to extract the markdown content from the web articles. After some cleaning, the extracted content is displayed on the web page. The service is wrapped in a Flask web application.
 
 ## Project Structure
 
@@ -41,7 +41,7 @@ The project is organized as follows:
 ## Technologies Used
 
 - **Python**: Python is used as the primary programming language for this project.
-- **Crawl4AI**: Crawl4AI is used to extract the markdown content from the web articles.
+- **Crawl4AI**: Crawl4AI extracts the markdown content from the web articles.
 - **Flask**: Flask is used to develop the web application.
 
 ## Installation and Environment Setup
@@ -60,7 +60,7 @@ To install the required dependencies and set up the environment, follow these st
 **Note**: When installing Crawl4AI, the setup script should automatically install and set up Playwright. However, for error encounters related to Playwright-related issues, manually install it using one of these methods through the command line:
 `playwright install` or `python -m playwright install`
 
-Now, you can open your local host at port 5000 and see the web application running. If you would like more information, please refer to the Flask documentation [here](https://flask.palletsprojects.com/en/2.0.x/quickstart/#debug-mode).
+Now, you can open your local host at port 5000 and see the web application running. For more information, please refer to the Flask documentation [here](https://flask.palletsprojects.com/en/2.0.x/quickstart/#debug-mode).
 
 ## Testing
 
@@ -71,7 +71,7 @@ To test the deployed service locally, follow these steps:
 3. Run the `test_app.py` file to test the Flask app.
 4. Execute the command: `pytest test/test_app.py`
 5. Verify the response and check for any errors or issues.
-6. Optionally, please take a look at the screenshots in the assets folder for test results.
+6. Optionally, please look at the screenshots in the assets folder for test results.
 
 ## Usage
 
