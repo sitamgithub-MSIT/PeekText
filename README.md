@@ -6,7 +6,7 @@ This repository contains the application that develops a web application that ex
 
 The project is organized as follows:
 
-- `assets/`: This directory contains screenshots of the web application for testing and cloud deployment.
+- `assets/`: This directory contains screenshots of the web application for testing.
 
 - `src/`: This directory contains the source code for the project.
 
